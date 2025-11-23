@@ -1,0 +1,16 @@
+1. Instalar as bibliotecas do python que as APIs usam, use o comando abaixo em  “ACME SA APIs Filiais P2/”.
+python -m pip install -r bibliotecas.txt
+
+2. Altere os .env das APIs caso deseje (no envio do projeto os .env das APIs estão criados), o modelo é:
+API_PORT=8000
+DATABASE_NAME=matriz.db
+
+3. Ligar a matriz (a matriz estar ligada é obrigatória em um sistema distribuído com arquitetura cliente-servidor com topologia hub-and-spoke/estrela) em “ACME SA APIs Filiais P2/matriz”.
+python api.py
+
+4. Ligar as filias (pode se ligar uma, duas ou as três) em “ACME SA APIs Filiais P2/alipio”, “ACME SA APIs Filiais P2/alvorada” e “ACME SA APIs Filiais P2/laranjeiras”.
+python api.py
+
+5. Com a matriz ligada e as filiais que deseja, basta realizar as requisições pelo “url_da_api/docs/”
+
+6. O login padrão de todas APIs é "admin" e senha "admin123"
